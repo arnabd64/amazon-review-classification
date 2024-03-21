@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "amazon-sentiment-classifier"
+version = "1.0"
+description = ""
+authors = ["arnabd64 <arnabdhar32@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+torch = {version = "^2.2.1+cpu", source = "pytorch"}
+transformers = "^4.39.0"
+fastapi = "^0.110.0"
+uvicorn = {extras = ["standard"], version = "^0.29.0"}
+python-multipart = "^0.0.9"
+
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
